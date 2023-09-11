@@ -1,0 +1,72 @@
+<p>emplyee-list works!</p>
+
+
+<h2>Employee List</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email Adresse</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+
+                <td>
+                    
+                        {{employee.id}}
+                    
+                </td>
+                <td>
+                        {{employee.firstName}}
+                    
+                </td>
+                <td>
+                    {{employee.lastName}}
+                
+            </td>
+            <td>
+                {{employee.emailAddress}}
+            
+        </td>
+
+                <td>
+                    <button  class="btn btn-primary"><i
+                            class="bi bi-trash3-fill"></i></button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Employee List</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.emailAddress}}</td>
+                <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
+                    <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

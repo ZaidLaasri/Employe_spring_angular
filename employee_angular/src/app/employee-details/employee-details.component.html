@@ -1,0 +1,27 @@
+<p>employee-details works!</p>
+
+
+<h1 *ngIf="employee">Details of  : {{employee.firstName}}</h1>
+
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">First name :</label>
+      <input *ngIf="employee" type="email" class="form-control" id="firstName" aria-describedby="emailHelp" value="{{employee.firstName}}" [attr.disabled]="isDisabled ? true : null" style="background-color: rgb(162, 162, 162);">
+     <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Last name :</label>
+        <input *ngIf="employee"  type="email" class="form-control" id="brand" aria-describedby="emailHelp" value="{{employee.lastName}}" [attr.disabled]="isDisabled ? true : null"  style="background-color: rgb(162, 162, 162);">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">emailAddress :</label>
+        <input *ngIf="employee" type="email" class="form-control" id="color" aria-describedby="emailHelp" value="{{employee.emailAddress}}" [attr.disabled]="isDisabled ? true : null"  style="background-color: rgb(162, 162, 162);">
+    </div>
+   
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Id :</label>
+        <input *ngIf="employee"  type="email" class="form-control" id="id" aria-describedby="emailHelp" value="{{employee.id}}" [attr.disabled]="isDisabled ? true : null"  style="background-color: rgb(162, 162, 162);">
+    </div>
+    
+
+  </form>
